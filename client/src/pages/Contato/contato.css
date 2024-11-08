@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+
+
+*{ margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Josefin Sans', sans-serif;}
+
+  @font-face {
+      font-family: grafitte;
+      src: url(adrip1.ttf);
+  }
+
+  @font-face {
+      font-family: don graf;
+      src: url(DonGraffiti.otf);
+  }
+
+  @font-face {
+      font-family: starbirl;
+      src: url(Starbirl.otf);
+  }
+
+  @font-face {
+      font-family: futura;
+      src: url(Futura\ Std\ Extra\ Bold\ Condensed\ Oblique.ttf);
+  }
+
+  @font-face {
+      font-family: futura leve;
+      src: url(Futura\ Std\ Light\ Condensed.ttf);
+  }
+
+#logo {
+  font-family: grafitte;
+  font-size: 8rem;
+  color: #30020a;
+  margin-left: 2%;
+  margin-top: 0.5%;
+}
+
+#home {
+  color: #30020a;
+}
+
+#nav-ul {
+  color: black;
+  flex-direction: row;
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+}
+
+nav{
+  display: inline;
+  justify-content: center;
+  margin-left: 30%;
+  margin-top: 0.5%;
+}
+
+nav>ul>li {
+  display: inline;
+  font-size: 20px;
+  font-family: 'Josefin Sans', sans-serif;
+  justify-content: space-around;
+  width: 10px;
+  color: #000000;
+  font-weight: 950;
+  margin-top: 4%;
+}
+
+#nav-ul a {
+  list-style: none;
+  text-decoration: none;
+  font-size: 25px;
+  font-family: 'Josefin Sans', sans-serif;
+  color: #000000;
+  font-weight: 950;
+  margin-top: 4%;
+}
+
+nav>ul>li:hover {
+  color: #30020a;
+}
+
+#topicos {
+  font-family: 'Montserrat', sans-serif;
+  margin-top: -7%;
+  justify-content: space-between;
+  width: 30%;
+  margin-left: 35%;
+}
+
+#produtos {
+  margin-left: 3%;
+}
+
+.sociais-svg{
+  fill: black;
+}
+
+.sociais-svg:hover{
+  fill: #30020a;
+  transition: 0.3s;
+}
+
+#icones {
+  display: flex;
+  justify-content: space-between;
+  width: 5.5%;
+  margin-left: 90%;
+  margin-top: -1%;
+}
+
+#section1 {
+    padding-top: 7em;
+    padding-left: 20rem;
+}
+
+
+#nome {
+    display: grid;
+    grid-template-columns: 250px 250px;
+    margin-left: -5%;
+}
+
+#form2 {
+    margin-left: -5%;
+    margin-top: 3%;
+}
+
+#form {
+    padding: 3em;
+}
+
+#form h2 {
+    font-size: 30px;
+    font-family: futura leve;
+    letter-spacing: 3px;
+    margin-left: -23%;
+}
+
+#lbl1 {
+    font-size: 25px;
+}
+
+#email {
+    border-radius: 30px;
+    height: 43px;
+    width: 430px;
+    font-size: 1rem;
+    line-height: 1.5;
+    border: 1px solid #30020a;
+    padding: 0.375rem 0.75rem;
+}
+
+#assunto {
+    border-radius: 30px;
+    height: 43px;
+    width: 430px;
+    font-size: 1rem;
+    line-height: 1.5;
+    border: 1px solid #30020a;
+    padding: 0.375rem 0.75rem;
+}
+
+#txtnome {
+    border-radius: 30px;
+    height: 43px;
+    width: 70%;
+    font-size: 1rem;
+    line-height: 1.5;
+    border: 1px solid #30020a;
+    padding: 0.375rem 0.75rem;
+}
+
+#txtmensagem {
+    border-radius: 30px;
+    height: 100px;
+    width: 430px;
+    font-size: 1rem;
+    line-height: 1.5;
+    border: 1px solid #30020a;
+    padding: 0.375rem 0.75rem;
+}
+
+#dois {
+  margin-top: 3%;
+}
+
+#tres {
+  margin-top: 3%;
+}
+
+#mainsec {
+  display: grid;
+  grid-template-columns: 700px 900px;
+}
+
+#section2 {
+  padding-top: 7em;
+  position: relative;
+  margin-left: 60%;
+}
+
+#section2 h2 {
+  font-family: futura leve;
+  font-size: 30px;
+  letter-spacing: 3px;
+}
+
+.endereco {
+  padding-top: 3em;
+}
+
+.endereco p {
+  font-size: 24px;
+  margin-top: 5%;
+}
+
+.endereco a{
+  text-decoration: none;
+}
+
+.endereco a:hover{
+  color: #30020a;
+}
+
+#btn {
+  width: 160px;
+  height: 50px;
+  border-radius: 30px;
+  margin-top: 3%;
+  background-color: #30020a;
+  color: white;
+  font-weight: bold;
+  font-family: futura leve;
+  letter-spacing: 2px;
+  font-size: 1.02em;
+  border: 1px solid black;
+}
+
+#btn:hover{
+  background-color: #0c0002;
+  transition: 0.3s;
+}

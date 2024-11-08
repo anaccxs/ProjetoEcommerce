@@ -1,0 +1,349 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+
+
+*{ margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;}
+
+    @font-face {
+        font-family: grafitte;
+        src: url(adrip1.ttf);
+    }
+
+    @font-face {
+        font-family: don graf;
+        src: url(DonGraffiti.otf);
+    }
+
+    @font-face {
+        font-family: starbirl;
+        src: url(Starbirl.otf);
+    }
+
+    @font-face {
+        font-family: futura;
+        src: url(Futura\ Std\ Extra\ Bold\ Condensed\ Oblique.ttf);
+    }
+
+    @font-face {
+        font-family: futura leve;
+        src: url(Futura\ Std\ Light\ Condensed.ttf);
+    }
+
+#logo {
+    font-family: grafitte;
+    font-size: 8rem;
+    color: #30020a;
+    margin-left: 2%;
+    margin-top: 0.5%;
+}
+
+#home {
+    color: #30020a;
+}
+
+#nav-ul {
+    color: black;
+    flex-direction: row;
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav{
+    display: inline;
+    justify-content: center;
+    margin-left: 30%;
+    margin-top: 0.5%;;
+}
+
+nav>ul>li {
+    display: inline;
+    font-size: 20px;
+    font-family: 'Josefin Sans', sans-serif;
+    justify-content: space-around;
+    width: 10px;
+    color: #000000;
+    font-weight: 950;
+    margin-top: 4%;
+}
+
+#nav-ul a {
+    list-style: none;
+    text-decoration: none;
+    font-size: 25px;
+    font-family: 'Josefin Sans', sans-serif;
+    color: #000000;
+    font-weight: 950;
+    margin-top: 4%;
+}
+
+nav>ul>li:hover {
+    color: #30020a;
+}
+
+#topicos {
+    font-family: 'Montserrat', sans-serif;
+    margin-top: -7%;
+    justify-content: space-between;
+    width: 30%;
+    margin-left: 35%;
+}
+
+#produtos {
+    margin-left: 3%;
+}
+
+.sociais-svg{
+    fill: black;
+}
+
+.sociais-svg:hover{
+    fill: #30020a;
+    transition: 0.3s;
+}
+
+#icones {
+    display: flex;
+    justify-content: space-between;
+    width: 5.5%;
+    margin-left: 90%;
+    margin-top: -1%;
+}
+
+#kyan {
+    margin-top: 4%;
+    text-align: right;
+    width: 100%;
+    padding-right: 5.2em;
+    position: relative;
+}
+
+#lacoste {
+    transform: rotate(270deg);
+    margin-left: -10%;
+    font-size: 205px;
+    margin-top: -36%;
+    position: absolute;
+    text-align: center;
+    letter-spacing: 12px;
+    padding-top: 0.5em;
+}
+
+#ano {
+    color: #30020a;
+}
+
+#nov{
+    color: #30020a;
+    font-size: 50px;
+    transform: rotate(270deg);
+    position: absolute;
+    margin-left: 6.4%;
+    margin-top: -25%;
+    letter-spacing: 32px;
+    font-weight: bold;
+}
+
+#section2 {
+    display: grid;
+    grid-template-columns: 432px 432px 432px 432px;
+    gap: 2%;
+    padding-top: 5em;
+    justify-content: center;
+}
+
+#roupas {
+    overflow: hidden;
+    position: relative;
+}
+
+#roupas img {
+    width: 100%;
+}
+
+#roupas:hover {
+    transform: scale(1.02);
+    filter: saturate(0);    
+    transition: 0.5s;
+}
+
+.gemeas {
+    width: 432px;
+    height: 540px;
+    background: url(baw.jpg);
+    background-size: 432px;
+}
+
+#moletons {
+    font-family: futura;
+    position: absolute;
+    text-align: center;
+    margin-top: 50%;
+    margin-left: 21%;
+    width: 250px;
+    line-height: 43px;
+    height: 50px;
+    font-size: 40px;
+    color: #30020a;
+    border: solid #30020a;
+}
+
+.compra {
+    color: #30020a;
+    font-family: futura;
+    margin-left: 34%;
+    margin-top: 62%;
+}
+
+.lentes {
+    width: 432px;
+    height: 540px;
+    background: url(oakley.png);
+    background-size: 432px;
+}
+
+.polos {
+    width: 432px;
+    height: 540px;
+    background: url(lacoste.jpg);
+    background-size: 432px;
+}
+
+.tenis {
+    width: 432px;
+    height: 540px;
+    background: url(nike.jpg);
+    background-size: 432px;
+}
+
+#linha {
+    width: 100%;
+    background-color: #30020a;
+    height: 3px;
+    margin-top: 5em
+}
+
+#section3 {
+    padding-top: -7rem;
+}
+
+#lancamentos {
+    padding-top: 5em;
+}
+
+#lancamentos h2 {
+    color: #30020a;
+    font-family: futura;
+    position: absolute;
+    font-size: 80px;
+    margin-left: 16%; 
+    
+}
+
+#lancamentos p{
+    font-family: 'Josefin Sans', sans-serif;
+    position: absolute;
+    margin-top: 6%;
+    font-size: 50px;
+    line-height: 1.5;
+    margin-left: 2%;
+    font-weight: 500;
+}
+
+#lancamentos article {
+    color: #000000;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 30px;
+    position: absolute;
+    margin-top: 30%;
+    margin-left: 2%;
+    font-weight: 300;
+}
+
+#preco {
+    color: #30020a;
+    font-weight: bold;
+}
+
+#magrao {
+    text-align: right;
+    padding-right: 5.2em;
+    margin-top: 0.3em;
+    position: relative;
+}
+
+#section4 {
+    background-color: #30020a;
+    margin-top: 5em;
+    display: grid;
+    grid-template-columns: 300px 300px 300px 300px;
+    gap: 170px;
+    padding-top: 5em;
+    padding-bottom: 5em;
+}
+
+.dep-p {
+    font-family:'Montserrat', sans-serif;;
+    color: white;
+    font-size: 10px;
+    line-height: 2;
+}
+
+#dep-tit{
+    font-size: 12px;
+    color: white;
+    line-height: 29px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#siga{
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    position: absolute;
+}
+
+.footer-svg{
+    fill: white;
+}
+
+.footer-svg:hover{
+    fill: #000000;
+    transition: 0.3s;
+}
+
+#footer-parceiras {
+    margin-left: 60%;
+    position: relative;
+}
+
+#sociais {
+    margin-left: 60%;
+}
+
+#departamentos {
+    margin-left: 8%;
+}
+
+#footer-contato {
+    margin-left: 5%;
+}
+
+#footer-icones {
+    display: flex;
+    justify-content: space-between;
+    width: 4.5rem;
+    margin-top: 20%;
+}
+
+#linha-footer {
+    width: 250%;
+    background-color: black;
+    height: 3px;
+    margin-left: 230%;
+}
