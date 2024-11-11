@@ -1,13 +1,13 @@
 import React from 'react';
 import './home.css';
-import Header from './components/Header'; /*????? nao importa de jeito nenhum
+/*import Header from './Header'; /*????? nao importa de jeito nenhum
 import Footer from 'Footer';*/
 
 const Home = () => {
   return (
     <div>
       <header>
-        <Header />
+       { /*<Header />*/ }
       </header>
 
       {/* Section 1 */}
@@ -55,7 +55,7 @@ const Home = () => {
 
       {/* Footer */}
       <footer>
-        <Footer />
+        {/*<Footer />*/}
       </footer>
     </div>
   );
