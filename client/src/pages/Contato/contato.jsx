@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './contato.css';
-import Header from '../../components/header/Header';
 import Footer from '../../components/footer/Footer';
+import Header from '../../components/header/Header'
 
 const Contato = () => {
   const [nome, setNome] = useState('');
@@ -18,7 +18,7 @@ const Contato = () => {
   return (
     <div>
       <header>
-        <Header/>
+        <Header />
       </header>
 
       <section id="mainsec">
@@ -105,7 +105,8 @@ const Contato = () => {
         </section>
       </section>
 
-      <Footer/>
+      <Footer />
+      
     </div>
   );
 };

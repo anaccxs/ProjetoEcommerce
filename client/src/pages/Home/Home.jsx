@@ -1,13 +1,13 @@
 import React from 'react';
 import './home.css';
-import Header from '../../components/header/Header';
 import Footer from '../../components/footer/Footer';
+import Header from '../../components/header/Header'
 
 const Home = () => {
   return (
     <div>
       <header>
-        <Header />
+       <Header />
       </header>
 
       {/* Section 1 */}
@@ -53,7 +53,6 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Footer */}
       <footer>
         <Footer />
       </footer>
