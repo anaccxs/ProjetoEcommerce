@@ -43,75 +43,7 @@
         margin-right: 5%;
     }
 
-    #nav-ul a {
-        list-style: none;
-        text-decoration: none;
-        font-size: 25px;
-        font-family: 'Josefin Sans', sans-serif;
-        color: #000000;
-        font-weight: 950;
-        margin-top: 4%;
-    }
     
-    #nav-ul {
-        color: black;
-        flex-direction: row;
-        align-items: center;
-        display: flex;
-        justify-content: space-around;
-    }
-    
-    nav{
-        display: inline;
-        justify-content: center;
-        margin-left: 30%;
-        
-    }
-    
-    nav>ul>li {
-        display: inline;
-        font-size: 25px;
-        font-family: 'Josefin Sans', sans-serif;
-        justify-content: space-around;
-        
-        color: #000000;
-        font-weight: 950;
-        
-    }
-    
-    nav>ul>li:hover {
-        color: #30020a;
-    }
-    
-    #topicos {
-        font-family: 'Montserrat', sans-serif;
-        margin-top: -7%;
-        justify-content: space-between;
-        width: 30%;
-        margin-left: 35%;
-    }
-    
-    #produtos {
-        margin-left: 5%;
-        color: #30020a;
-    }
-    
-    .sociais-svg{
-        fill: black;
-    }
-    
-    .sociais-svg:hover{
-        fill: #30020a;
-        transition: 0.3s;
-    }
-    
-    #icones {
-        display: flex;
-        justify-content: space-between;
-        width: 5.5%;
-        margin-left: 90%;
-        margin-top: -1%;
-    }
 
     #tit {
         text-align: center;
