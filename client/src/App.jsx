@@ -1,12 +1,10 @@
-import { useState } from 'react'
-import Home from './pages/Home/Home'
+import AppRoutes from './routes'
 
 function App() {
+
   return (
-    <>
-      <Home />
-    </>
+    <AppRoutes />
   )
 }
 
-export default App;
+export default App

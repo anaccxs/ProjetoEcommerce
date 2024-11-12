@@ -126,10 +126,11 @@ nav>ul>li:hover {
 }
 
 
-#nome {
+.nome {
     display: grid;
     grid-template-columns: 250px 250px;
     text-align: center;
+    margin-top: 5%;
 }
 
 #form2 {
@@ -167,20 +168,10 @@ h2 {
     padding: 0.375rem 0.75rem;
 }
 
-#txtnome {
+.txtnome {
     border-radius: 30px;
     height: 43px;
     width: 70%;
-    font-size: 1rem;
-    line-height: 1.5;
-    border: 1px solid #30020a;
-    padding: 0.375rem 0.75rem;
-}
-
-#txtmensagem {
-    border-radius: 30px;
-    height: 100px;
-    width: 430px;
     font-size: 1rem;
     line-height: 1.5;
     border: 1px solid #30020a;
@@ -205,8 +196,15 @@ h2 {
 
 #mainsec {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+#mainsec p{
+    margin: 4%;
+    text-decoration: underline;
+
 }
 
 #section2 {

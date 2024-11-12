@@ -1,112 +1,80 @@
 import React, { useState } from 'react';
-import './login.css';
-import Header from './Header';
+import './login.css';  // Importa o CSS
+import Header from '../../components/header/Header';
+import Footer from '../../components/footer/Footer';
 
-const Contato = () => {
-  // Estado para armazenar os valores dos campos do formulário
-  const [nome, setNome] = useState('');
-  const [sobrenome, setSobrenome] = useState('');
-  const [email, setEmail] = useState('');
-  const [assunto, setAssunto] = useState('');
-  const [mensagem, setMensagem] = useState('');
+const Login = () => {
+  // State para gerenciar os dados do formulário
+  const [formData, setFormData] = useState({
+    email: '',
+    senha: '',
+  });
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    // Aqui você pode lidar com a lógica de envio do formulário
-    alert(`Mensagem enviada por: ${nome} ${sobrenome}`);
+  // Função para atualizar o estado dos inputs
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
+  // Função para lidar com o envio do formulário
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // Aqui você pode enviar os dados para um servidor ou API, por exemplo
+    console.log('Dados de Login:', formData);
   };
 
   return (
     <div>
       <header>
-        <Header />
+        <Header/>
       </header>
 
       <section id="mainsec">
         <section id="section1">
           <div id="form">
-            <h2>Entre em contato</h2>
+            <h2>Login</h2>
           </div>
-          <form onSubmit={handleSubmit}>
-            <div id="nome">
-              <div id="nome1">
-                <label htmlFor="txtnome" id="lbl1">Nome</label><br />
-                <input 
-                  type="text" 
-                  id="txtnome" 
-                  value={nome} 
-                  onChange={(e) => setNome(e.target.value)} 
-                />
-              </div>
 
-              <div id="nome2">
-                <label htmlFor="txtsobrenome" id="lbl1">Sobrenome</label><br />
-                <input 
-                  type="text" 
-                  id="txtsobrenome" 
-                  value={sobrenome} 
-                  onChange={(e) => setSobrenome(e.target.value)} 
-                />
-              </div>
+          <div id="form2">
+            <div id="dois">
+              <label htmlFor="email">Email</label><br />
+              <input
+                type="email"
+                id="email"
+                name="email"
+                value={formData.email}
+                onChange={handleInputChange}
+              />
             </div>
-            <div id="form2">
-              <div id="dois">
-                <label htmlFor="email" id="lbl1">Email</label><br />
-                <input 
-                  type="email" 
-                  id="email" 
-                  value={email} 
-                  onChange={(e) => setEmail(e.target.value)} 
-                />
-              </div>
 
-              <div id="dois">
-                <label htmlFor="assunto" id="lbl1">Assunto</label><br />
-                <input 
-                  type="text" 
-                  id="assunto" 
-                  value={assunto} 
-                  onChange={(e) => setAssunto(e.target.value)} 
-                />
-              </div>
-
-              <div id="tres">
-                <label htmlFor="txtmensagem" id="lbl1">Mensagem</label><br />
-                <textarea 
-                  id="txtmensagem" 
-                  cols="30" 
-                  rows="10" 
-                  placeholder="Escreva sua mensagem aqui :)"
-                  value={mensagem}
-                  onChange={(e) => setMensagem(e.target.value)}
-                ></textarea>
-                <input type="submit" value="Enviar mensagem" id="btn" />
-              </div>
+            <div id="dois">
+              <label htmlFor="senha">Senha</label><br />
+              <input
+                type="password"
+                id="senha"
+                name="senha"
+                value={formData.senha}
+                onChange={handleInputChange}
+              />
             </div>
-          </form>
-        </section>
 
-        <section id="section2">
-          <div className="endereco">
-            <h2>Onde nos encontrar?</h2>
-            <a href="https://goo.gl/maps/eDtNKKRhxwtW3HZx8">
-              <p>Mercado Novo - Av. Olegário Maciel, 742 - Centro, Belo Horizonte - MG, 30180-112</p>
-            </a>
+            <div id="tres">
+              <button type="submit" id="btn" onClick={handleSubmit}>
+                Entrar
+              </button>
+            </div>
           </div>
 
-          <div className="endereco" id="tel">
-            <h2>Telefone</h2>
-            <a href="tel:+313993062058"><p>(31) 99306-2058</p></a>
-          </div>
-
-          <div className="endereco">
-            <h2>Email</h2>
-            <p>contato@ousadiabrasil.com.br</p>
-          </div>
+          <p>Não possui uma conta? <a href="cadastro.html">Cadastre-se</a></p>
         </section>
       </section>
+
+      <Footer/>
     </div>
   );
 };
 
-export default Contato;
+export default Login;
