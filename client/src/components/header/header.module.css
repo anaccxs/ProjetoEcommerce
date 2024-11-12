@@ -1,0 +1,121 @@
+/* header.module.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+*{ margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+    text-decoration: none;
+    /*overflow-x: hidden;*/
+}
+
+@font-face {
+        font-family: grafitte;
+        src: url(adrip1.ttf);
+    }
+
+    @font-face {
+        font-family: don graf;
+        src: url(DonGraffiti.otf);
+    }
+
+    @font-face {
+        font-family: starbirl;
+        src: url(Starbirl.otf);
+    }
+
+    @font-face {
+        font-family: futura;
+        src: url(Futura\ Std\ Extra\ Bold\ Condensed\ Oblique.ttf);
+    }
+
+    @font-face {
+        font-family: futura leve;
+        src: url(Futura\ Std\ Light\ Condensed.ttf);
+    }
+
+    .logo {
+        font-family: grafitte;
+        font-size: 8rem;
+        color: #30020a;
+        margin-left: 2%;
+    }
+
+/* Para o ul dentro de nav */
+.navUl {
+    color: black;
+    flex-direction: row;
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Para o elemento <nav> */
+.nav {
+    display: inline;
+    justify-content: center;
+    margin-left: 30%;
+    margin-top: 0.5%;
+}
+
+/* Para os <li> dentro de <nav> > <ul> */
+.navItem {
+    display: inline;
+    font-size: 25px;
+    font-family: 'Josefin Sans', sans-serif;
+    justify-content: space-around;
+    width: 10px;
+    font-weight: 950;
+    margin-top: 4%;
+}
+
+/* Para links dentro de <nav> > <ul> > <li> */
+.navUlLink {
+    list-style: none;
+    font-size: 25px;
+    font-family: 'Josefin Sans', sans-serif;
+    color: black;
+    font-weight: 950;
+    margin-top: 4%;
+}
+
+/* Para o hover nos <li> dentro de <nav> */
+.navItemHover {
+    color: #30020a;
+}
+
+/* Para o container de tópicos */
+.topicos {
+    font-family: 'Montserrat', sans-serif;
+    margin-top: -5%;
+    justify-content: space-between;
+    width: 30%;
+    margin-left: 35%;
+}
+
+/* Para o item específico de "produtos" */
+.produtos {
+    margin-left: 3%;
+}
+
+/* Para os ícones sociais */
+.sociaisSvg {
+    fill: black;
+}
+
+/* Para o hover nos ícones sociais */
+.sociaisSvgHover {
+    fill: #30020a;
+    transition: 0.3s;
+}
+
+/* Para o container de ícones sociais */
+.icones {
+    display: flex;
+    justify-content: space-between;
+    width: 5.5%;
+    margin-left: 90%;
+    margin-top: -1%;
+}
