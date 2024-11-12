@@ -1,7 +1,8 @@
 import React from 'react';
 import Footer from '../../components/footer/Footer';
 import './baw.css'
-import Header from '../../components/header/header';
+import Footer from '../../components/footer/Footer';
+import Header from '../../components/header/Header'
 
 const Baw = () => {
   return (

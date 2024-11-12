@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import './login.css';
-import Header from './Header';
+import Footer from '../../components/footer/Footer';
+import Header from '../../components/header/Header'
 
-const Contato = () => {
+const Login = () => {
   // Estado para armazenar os valores dos campos do formulário
   const [nome, setNome] = useState('');
   const [sobrenome, setSobrenome] = useState('');
@@ -105,8 +106,11 @@ const Contato = () => {
           </div>
         </section>
       </section>
+
+      <Footer />
+      
     </div>
   );
 };
 
-export default Contato;
+export default Login;
