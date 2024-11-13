@@ -1,0 +1,52 @@
+
+.section4 {
+    background-color: #30020a;
+    margin-top: 0em;
+    display: flex;
+    justify-content: space-around;
+    padding: 5em 0em;
+}
+
+.depTit {
+    font-size: 1em;
+    color: white;
+    line-height: 1.8;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.depP {
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-size: 1em;
+    line-height: 2;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.depP:hover{
+    text-decoration: underline;
+}
+
+.footerIcones {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+}
+
+.linhaFooter {
+    width: 100%;
+    background-color: black;
+    height: 3px;
+    padding-bottom: 2%;
+}
+
+.footerSvg {
+    fill: white;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.footerSvg:hover {
+    fill: black;
+}
