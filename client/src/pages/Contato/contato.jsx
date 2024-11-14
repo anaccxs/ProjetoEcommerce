@@ -31,9 +31,7 @@ const Contato = () => {
 
       <section className={styles.mainsec}>
         <section className={styles.section1}>
-          <div className={styles.form}>
-            <h2>Entre em contato</h2>
-          </div>
+          <h2>Entre em contato</h2>
           <form onSubmit={handleSubmit}>
             <div className={styles.nome1}>
               <div className={styles.nome}>
@@ -47,7 +45,7 @@ const Contato = () => {
                 />
               </div>
 
-              <div className={styles.nome}>
+              <div className={styles.nome2}>
                 <label htmlFor="txtsobrenome" className={styles.lbl1}>Sobrenome</label><br />
                 <input
                   type="text"

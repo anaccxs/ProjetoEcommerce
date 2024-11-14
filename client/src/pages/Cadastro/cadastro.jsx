@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import './cadastro.css';  // Importa o CSS
+import { Link } from 'react-router-dom';
+import styles from './cadastro.module.css';  // Importa o CSS Module
 import Header from '../../components/header/Header';
 import Footer from '../../components/footer/Footer';
 
@@ -32,75 +33,71 @@ const Cadastro = () => {
   return (
     <div>
       <header>
-        <Header/>
+        <Header />
       </header>
 
-      <section id="mainsec">
-        <section id="section1">
-          <div id="form">
-            <h2>Cadastrar</h2>
-          </div>
+      <section className={styles.mainsec}>
+        <section className={styles.section1}>
+          <h2>Cadastrar</h2>
 
-          <div className="nome">
-            <div>
-              <label htmlFor="nome">Nome</label><br />
+          <div className={styles.nome}>
+            <div className={styles.nome1}>
+              <label htmlFor="nome" className={styles.lbl1}>Nome</label><br />
               <input
                 type="text"
-                id="nome"
                 name="nome"
-                className='txtnome'
+                className={styles.txtnome}
                 value={formData.nome}
                 onChange={handleInputChange}
               />
             </div>
 
-            <div id="nome2">
-              <label htmlFor="sobrenome">Sobrenome</label><br />
+            <div className={styles.nome2}>
+              <label htmlFor="sobrenome" className={styles.lbl1}>Sobrenome</label><br />
               <input
                 type="text"
-                id="sobrenome"
                 name="sobrenome"
-                className='txtnome'
+                className={styles.txtnome}
                 value={formData.sobrenome}
                 onChange={handleInputChange}
               />
             </div>
           </div>
 
-          <div id="form2">
-            <div id="dois">
-              <label htmlFor="email">Email</label><br />
+          <div className={styles.form2}>
+            <div className={styles.dois}>
+              <label htmlFor="email" className={styles.lbl1}>Email</label><br />
               <input
                 type="email"
-                id="email"
                 name="email"
+                className={styles.email}
                 value={formData.email}
                 onChange={handleInputChange}
               />
             </div>
 
-            <div id="dois">
-              <label htmlFor="assunto">Assunto</label><br />
+            <div className={styles.dois}>
+              <label htmlFor="assunto" className={styles.lbl1}>Assunto</label><br />
               <input
                 type="text"
-                id="assunto"
                 name="assunto"
+                className={styles.assunto}
                 value={formData.assunto}
                 onChange={handleInputChange}
               />
             </div>
 
-            <div id="tres">
-              <button type="submit" id="btn" onClick={handleSubmit}>
+            <div className={styles.tres}>
+              <button type="submit" className={styles.btn} onClick={handleSubmit}>
                 Cadastrar
               </button>
             </div>
           </div>
         </section>
-        <p>Já possui uma conta?</p>
+        <Link className={styles.linklogin} to={"/Login"}>Já possui uma conta?</Link>
       </section>
 
-      <Footer/>
+      <Footer />
     </div>
   );
 };

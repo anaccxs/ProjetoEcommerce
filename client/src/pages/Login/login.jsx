@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import './login.css';  // Importa o CSS
+import { Link } from 'react-router-dom';
+import styles from './login.module.css';  // Importa o CSS Module
 import Header from '../../components/header/Header';
 import Footer from '../../components/footer/Footer';
 
@@ -29,18 +30,16 @@ const Login = () => {
   return (
     <div>
       <header>
-        <Header/>
+        <Header />
       </header>
 
-      <section id="mainsec">
-        <section id="section1">
-          <div id="form">
-            <h2>Login</h2>
-          </div>
+      <section className={styles.mainsec}>
+        <section className={styles.section1}>
+          <h2>Login</h2>
 
-          <div id="form2">
-            <div id="dois">
-              <label htmlFor="email">Email</label><br />
+          <div className={styles.form2}>
+            <div className={styles.dois}>
+              <label htmlFor="email">Email</label>
               <input
                 type="email"
                 id="email"
@@ -50,8 +49,8 @@ const Login = () => {
               />
             </div>
 
-            <div id="dois">
-              <label htmlFor="senha">Senha</label><br />
+            <div className={styles.dois}>
+              <label htmlFor="senha">Senha</label>
               <input
                 type="password"
                 id="senha"
@@ -61,18 +60,18 @@ const Login = () => {
               />
             </div>
 
-            <div id="tres">
-              <button type="submit" id="btn" onClick={handleSubmit}>
+            <div className={styles.tres}>
+              <button type="submit" className={styles.btn} onClick={handleSubmit}>
                 Entrar
               </button>
             </div>
           </div>
 
-          <p>Não possui uma conta? <a href="cadastro.html">Cadastre-se</a></p>
+          <Link className={styles.linkcadastro} to="/Cadastro">Não possui uma conta? - Cadastre-se</Link>
         </section>
       </section>
 
-      <Footer/>
+      <Footer />
     </div>
   );
 };
