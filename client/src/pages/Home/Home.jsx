@@ -12,13 +12,14 @@ const Home = () => {
 
       {/* Section 1 */}
       <section>
-        <div className={styles.kyan}>
-          <img src="kyan-inicial.jpg" alt="Kyan" width="1300px" />
-        </div>
         <h3 className={styles.lacoste}>
-          LACOS<br /><span className={styles.ano}>2023</span><span className={styles.te}>TE</span>
+          <span className={styles.lacosteTxt}>LACOSTE</span>
+          <span className={styles.ano}>2024</span>
         </h3>
-        <article className={styles.nov}>LANÇAMENTOS</article>
+        <div className={styles.lacosteImg}>
+          <img src="lacoste-nova.jpg" width="840px" />
+        </div>
+        <h3 className={styles.nov}>LANÇAMENTOS</h3>
       </section>
 
       {/* Section 2 */}
