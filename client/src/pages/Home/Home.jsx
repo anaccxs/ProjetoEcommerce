@@ -10,20 +10,21 @@ const Home = () => {
         <Header />
       </header>
 
-      {/* Section 1 */}
       <section>
         <h3 className={styles.lacoste}>
-          <span className={styles.lacosteTxt}>LACOSTE</span>
-          <span className={styles.ano}>2024</span>
+          <div>
+            <span className={styles.lacosteTxt}>LACOSTE</span>
+            <span className={styles.ano}>2024</span>
+          </div>
         </h3>
         <div className={styles.lacosteImg}>
-          <img src="lacoste-nova.jpg" width="840px" />
+          <img src="lacoste-nova.jpg" />
         </div>
-        <h3 className={styles.nov}>LANÇAMENTOS</h3>
+        <h3 className={styles.h3}>LANÇAMENTOS</h3>
       </section>
 
-      {/* Section 2 */}
       <section className={styles.section2}>
+        
         <div className={`${styles.roupas} ${styles.gemeas}`}>
           <h2 className={styles.moletons}>MOLETONS</h2>
           <h2 className={styles.compra}>SAIBA MAIS</h2>
@@ -49,14 +50,14 @@ const Home = () => {
         <div className={styles.lancamentos}>
           <h2>BDA 7 ANOS</h2>
           <p>
-            No grande evento de comemoração de 7 anos <br /> da Batalha da Aldeia, o MC Magrão usava <br />
-            seu moletom da Tropa da Vents. <br />Juntamente com outros MCs que representam a <br />
-            cena e ao mesmo tempo, são grande referência <br />da moda de rua.
+            No grande evento de comemoração de 7 anos da Batalha da Aldeia, o MC Magrão usava
+            seu moletom da Tropa da Vents. Juntamente com outros MCs que representam a
+            cena e ao mesmo tempo, são grande referênciada moda de rua.
           </p>
           <article>Garanta já o seu por apenas <span className={styles.preco}>$80,00!</span></article>
         </div>
         <div className={styles.magrao}>
-          <img src="bda.jpg" alt="BDA" width="650px" />
+          <img src="bda.jpg" alt="BDA" />
         </div>
       </section>
 

@@ -1,13 +1,16 @@
-/* style.module.css */
-
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
-
+Reset de Estilos Globais
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
   font-family: 'Josefin Sans', sans-serif;
 }
 
+/* Importando Fontes */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+/* Definição de fontes customizadas */
 @font-face {
   font-family: grafitte;
   src: url(adrip1.ttf);
@@ -33,109 +36,102 @@
   src: url(Futura\ Std\ Light\ Condensed.ttf);
 }
 
-.logo {
-  font-family: grafitte;
-  color: #30020a;
-  margin-left: 2%;
-}
-
-.home {
-  color: #30020a;
-}
-
+/* Contêiner de imagens Lacoste */
 .lacosteImg {
-    text-align: center;
+  text-align: center;
+  height: 500px;
+  width: 100%;
+}
+
+.lacoste{
+  margin-top: 5%;
+}
+
+/* Estilo de Títulos */
+.lacoste, .h3 {
+  display: flex;
+  justify-content: center;
+  color: #30020a;
 }
 
 .lacosteTxt {
-  font-size: 96px;
-  text-align: center;
-  margin-left: 33%;
-  padding-top: 5em;
+  font-size: 90px;
 }
 
 .ano {
+  font-size: 30px;
   color: #30020a;
 }
 
-.nov {
-  color: #30020a;
+.h3 {
   font-size: 60px;
-  position: absolute;
-  margin-left: 18%;
   letter-spacing: 32px;
   font-weight: bold;
+  text-align: center;
 }
 
+/* Seção de Produtos */
 .section2 {
-  display: grid;
-  grid-template-columns: 400px 400px 400px 400px;
-  gap: 5%;
-  padding-top: 5em;
+  display: flex;
+  overflow-x: auto;
   justify-content: center;
-  height: 650px;
+  padding-top: 3em;
 }
 
-.roupas {
-  overflow: hidden;
-  position: relative;
-} 
+.section2 div {
+  margin: 1%;
+  text-align: center;
+  cursor: pointer;
+  width: 300px;
+  height: 400px;
+  transition: transform 0.5s, filter 0.5s;
+}
 
-.roupas:hover {
+.section2 div:hover {
   transform: scale(1.02);
   filter: saturate(0);
-  transition: 0.5s;
-}
-
-.gemeas {
-  width: 432px;
-  height: 540px;
-  background: url(baw.jpg);
-  background-size: 432px;
 }
 
 .moletons {
   font-family: futura;
-  position: absolute;
-  text-align: center;
-  margin-top: 50%;
-  margin-left: 21%;
-  width: 250px;
-  line-height: 43px;
-  height: 50px;
-  font-size: 40px;
+  margin-top: 70%;
+  margin-left: 1%;
+  margin-right: 1%;
+  font-size: 35px;
   color: #30020a;
-  border: solid #30020a;
+  border: solid 1px #30020a;
 }
 
+/* Estilo dos botões de "Saiba Mais" */
 .compra {
   color: #30020a;
   font-family: futura;
-  margin-left: 34%;
-  margin-top: 62%;
+}
+
+/* Estilo dos Produtos Específicos */
+.gemeas, .lentes, .polos, .tenis {
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+}
+
+.gemeas {
+  background-image: url(baw.jpg);
 }
 
 .lentes {
-  width: 432px;
-  height: 540px;
-  background: url(oakley.png);
-  background-size: 432px;
+  background-image: url(oakley.png);
 }
 
 .polos {
-  width: 432px;
-  height: 540px;
-  background: url(lacoste.jpg);
-  background-size: 432px;
+  background-image: url(lacoste.jpg);
 }
 
 .tenis {
-  width: 432px;
-  height: 540px;
-  background: url(nike.jpg);
-  background-size: 432px;
+  background-image: url(nike.jpg);
 }
 
+/* Linha Divisória */
 .linha {
   width: 100%;
   background-color: #30020a;
@@ -144,39 +140,49 @@
 }
 
 .section3 {
-  padding-top: -7rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  justify-items: center;
+  align-items: center;
+  height: auto;  /* Ajuste para conteúdo dinâmico */
+  padding: 4rem 2rem;
 }
 
 .lancamentos {
-  padding-top: 5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 600px; /* Limita o tamanho da coluna de texto */
 }
 
 .lancamentos h2 {
   color: #30020a;
   font-family: futura;
-  position: absolute;
-  font-size: 80px;
-  margin-left: 16%;
+  font-size: 60px;
+  margin-bottom: 1rem;  /* Espaçamento entre título e texto */
+  text-align: left;
 }
 
 .lancamentos p {
   font-family: 'Josefin Sans', sans-serif;
-  position: absolute;
-  margin-top: 6%;
-  font-size: 50px;
+  font-size: 30px;
   line-height: 1.5;
-  margin-left: 2%;
   font-weight: 500;
+  color: #333;
+  margin-top: 1rem;
+  margin-bottom: 2rem;  /* Espaçamento entre parágrafo e o artigo */
+  max-width: 90%;  /* Limita a largura para melhorar a legibilidade */
 }
 
 .lancamentos article {
-  color: #000000;
   font-family: 'Josefin Sans', sans-serif;
-  font-size: 30px;
-  position: absolute;
-  margin-top: 30%;
-  margin-left: 2%;
+  font-size: 35px;
   font-weight: 300;
+  color: #000;
+  margin-top: 2rem;
 }
 
 .preco {
@@ -185,8 +191,15 @@
 }
 
 .magrao {
-  text-align: right;
-  padding-right: 5.2em;
-  margin-top: 0.3em;
+  width: 100%;
+  max-width: 600px;  /* Limita a largura da imagem */
+  text-align: center;
   position: relative;
+}
+
+.magrao img {
+  width: 100%;
+  height: auto;
+  max-height: 600px;  /* Garantir que a imagem não ultrapasse o tamanho máximo */
+  object-fit: cover;  /* Garantir que a imagem cubra a área sem distorcer */
 }

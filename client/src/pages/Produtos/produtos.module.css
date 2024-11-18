@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+/* Reseta margens e padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+/* Declaração de fontes personalizadas */
+@font-face {
+  font-family: grafitte;
+  src: url(adrip1.ttf);
+}
+
+@font-face {
+  font-family: don graf;
+  src: url(DonGraffiti.otf);
+}
+
+@font-face {
+  font-family: starbirl;
+  src: url(Starbirl.otf);
+}
+
+@font-face {
+  font-family: futura;
+  src: url(Futura\ Std\ Extra\ Bold\ Condensed\ Oblique.ttf);
+}
+
+@font-face {
+  font-family: futura leve;
+  src: url(Futura\ Std\ Light\ Condensed.ttf);
+}
+
+.section1 {
+    text-align: center;
+    margin-top: 5%;
+}
+
+.section1 h1{
+    color: black;
+    font-family: futura leve;
+    font-size: 6em;
+}
+
+.section1 h2 {
+    color: black;
+    font-family: futura leve;
+    font-size: 2em;
+    letter-spacing: 5px;
+}
+
+.baw1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 1%;
+  align-items: center;
+}
+
+.baw1 div{
+    margin: 1% 4%;
+}
+
+.bawModelos{
+    width: 250px;
+    cursor: pointer;
+}
+
+.bawModelos:hover {
+  transform: scale(1.02);
+  transition: 0.5s;
+  overflow: hidden;
+}
+
+.precos {
+  text-align: center;
+  color: #49030f;
+  margin-top: 5%;
+}
+
+.txtSaibaMais {
+  margin-top: 50%;
+}
+
+.txtSaibaMais:hover {
+  color: #30020a;
+}
+
+
+.lacoste {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1%;
+    margin-bottom: 6%;
+    overflow-x: auto;
+}
+
+.lacoste div{
+    margin: 2% 5%;
+}
+
+.seta {
+  cursor: pointer;
+}
+
+.seta:hover {
+  color: #30020a;
+}

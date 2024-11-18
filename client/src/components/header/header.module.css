@@ -36,45 +36,40 @@
         src: url(Futura\ Std\ Light\ Condensed.ttf);
     }
 
-.logo {
-    font-family: grafitte;
-    font-size: 100px;
-    color: #30020a;
-    padding: 0% 2%;
+header{
+    padding: 0% 1%;
 }
 
-/* Para o ul dentro de nav */
+.logo {
+    width: 30%;
+    font-family: grafitte;
+    font-size: 70px;
+    color: #30020a;
+}
+
 .navUl {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    width: 100%;
+    width: 60%;
 }
 
-
-/* Para os <li> dentro de <nav> > <ul> */
 .navItem {
     color: black;
     font-weight: 900;
-    font-size: 2em;
+    font-size: 1.5em;
     font-family: 'Josefin Sans', sans-serif;
     justify-content: space-around;
 }
 
-/* Para o hover nos <li> dentro de <nav> */
 .navItem:hover {
     color: #30020a;
 }
 
-/* Para o container de tópicos */
 .topicos {
     display: flex;
     font-family: 'Montserrat', sans-serif;
     justify-content: space-between;
-}
-
-.produtos {
-    margin-left: 0%;
 }
 
 .sociaisSvg {
