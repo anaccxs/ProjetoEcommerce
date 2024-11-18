@@ -9,7 +9,8 @@ const Cadastro = () => {
   const [formData, setFormData] = useState({
     nome: '',
     sobrenome: '',
-    email: ''
+    email: '',
+    senha: ''
   });
 
   // Função para atualizar o estado dos inputs
@@ -70,6 +71,17 @@ const Cadastro = () => {
                 name="email"
                 className={styles.email}
                 value={formData.email}
+                onChange={handleInputChange}
+              />
+            </div>
+
+            <div className={styles.dois}>
+              <label htmlFor="password" className={styles.lbl1}>Senha</label><br />
+              <input
+                type="password"
+                name="senha"
+                className={styles.email}
+                value={formData.senha}
                 onChange={handleInputChange}
               />
             </div>

@@ -51,7 +51,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-around;
-    width: 60%;
+    width: 40%;
 }
 
 .navItem {
@@ -84,8 +84,62 @@ header{
 
 .icones {
     margin: 0% 5%;
-    width: 10%;
+    width: 7%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.search {
+    margin-top: 2%;
+    display: flex;
+    gap: 5px;
+    margin-left: -5%;
+}
+
+.search input {
+    width: 170px;
+    border: solid 2px #30020a;
+    height: 25px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.svgSearch {
+    margin-top: 2%;
+}
+
+.btnCart {
+    height: 40px;
+    margin-top: 2%;
+    background-color: transparent;
+    border: 0;
+    margin-left: -5%;
+    width: 30px;
+}
+
+.quantProdutos {
+    content: "";
+    position: relative;
+    margin-right: 25%;
+    background-color: #30020a;
+    color: white;
+    font-weight: bold;
+    font-size: 13px;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+}
+
+.svgCart {
+    color: #30020a;
+}
+
+.menuBars {
+    height: 23px;
+    margin-top: 2%;
+    background-color: transparent;
+    border: 0;
+    margin-left: -4%;
+    width: 30px;
 }
