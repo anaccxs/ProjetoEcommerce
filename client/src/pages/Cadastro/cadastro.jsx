@@ -8,24 +8,14 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
 const Cadastro = () => {
-  // State para gerenciar os dados do formulário
-  const [formData, setFormData] = useState({
-    nome: '',
-    sobrenome: '',
-    email: ''
-  });
+  const [username, setUsername] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
+  const [role, setRole] = useState('user'); // Definindo um valor padrão
+  const navigate = useNavigate();
 
-  // Função para atualizar o estado dos inputs
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
-  };
-
-  // Função para lidar com o envio do formulário
-  const handleSubmit = (e) => {
+  const handleRegister = async (e) => {
     e.preventDefault();
     try {
       await axios.post('http://localhost:5000/api/auth/register', {
@@ -80,12 +70,13 @@ const Cadastro = () => {
                 onChange={(e) => setPassword(e.target.value)}
                 required
               />
-            </div>
-
-            <div className={styles.tres}>
-              <button type="submit" className={styles.btn} onClick={handleSubmit}>
-                Cadastrar
-              </button>
+            </div>            
+            <div className={styles.dois}>
+              <label className={styles.lbl1}>Role</label>
+              <select value={role} className={styles.txtnome} onChange={(e) => setRole(e.target.value)}>
+                <option value="user">User</option>
+                <option value="admin">Admin</option>
+              </select>
             </div>
             {error && <p>{error}</p>}
             <button type="submit" className={styles.btn}>Cadastrar</button>
