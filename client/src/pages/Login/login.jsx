@@ -1,30 +1,42 @@
+// src/pages/Login/login.jsx
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import styles from './login.module.css';  // Importa o CSS Module
 import Header from '../../components/header/Header';
 import Footer from '../../components/footer/Footer';
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
-  // State para gerenciar os dados do formulário
-  const [formData, setFormData] = useState({
-    email: '',
-    senha: '',
-  });
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [error, setError] = useState('');
+  const navigate = useNavigate();
 
-  // Função para atualizar o estado dos inputs
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
-  };
-
-  // Função para lidar com o envio do formulário
-  const handleSubmit = (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
-    // Aqui você pode enviar os dados para um servidor ou API, por exemplo
-    console.log('Dados de Login:', formData);
+
+    try {
+      // Fazer login
+      const response = await axios.post('http://localhost:5000/api/auth/login', {
+        email,
+        password
+      });
+
+      const { token, role } = response.data;
+
+      // Armazenar o token no localStorage
+      localStorage.setItem('token', token);
+
+      // Redirecionar com base no papel do usuário (role)
+      if (role === 'admin') {
+        navigate('/admin');
+      } else {
+        navigate('/profile');
+      }
+    } catch (error) {
+      setError(error.response?.data?.error || 'Erro ao fazer login');
+    }
   };
 
   return (
@@ -37,37 +49,30 @@ const Login = () => {
         <section className={styles.section1}>
           <h2>Login</h2>
 
-          <div className={styles.form2}>
+          <form className={styles.form2} onSubmit={handleLogin}>
             <div className={styles.dois}>
-              <label htmlFor="email">Email</label>
+              <label>Email</label>
               <input
                 type="email"
-                id="email"
-                name="email"
-                value={formData.email}
-                onChange={handleInputChange}
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
               />
             </div>
-
             <div className={styles.dois}>
-              <label htmlFor="senha">Senha</label>
+              <label>Senha</label>
               <input
                 type="password"
-                id="senha"
-                name="senha"
-                value={formData.senha}
-                onChange={handleInputChange}
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                required
               />
             </div>
+            {error && <p>{error}</p>}
+            <button type="submit" className={styles.btn}>Entrar</button>
+          </form>
 
-            <div className={styles.tres}>
-              <button type="submit" className={styles.btn} onClick={handleSubmit}>
-                Entrar
-              </button>
-            </div>
-          </div>
-
-          <Link className={styles.linkcadastro} to="/Cadastro">Não possui uma conta? - Cadastre-se</Link>
+          <Link className={styles.linkcadastro} to="/register">Não possui uma conta? - Cadastre-se</Link>
         </section>
       </section>
 

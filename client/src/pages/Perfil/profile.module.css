@@ -1,0 +1,15 @@
+.maindiv > section{
+    text-align: center;
+    padding: 10%;
+}
+
+.maindiv > section p{
+    font-size: 1.8em;
+    line-height: 1.7;
+}
+
+.maindiv > section h1{
+    font-size: 4em;
+    line-height: 2;
+    font-weight: bolder;
+}

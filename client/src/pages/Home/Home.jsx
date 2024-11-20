@@ -1,3 +1,4 @@
+// src/pages/Home/Home.jsx
 import React from 'react';
 import styles from './home.module.css';
 import Footer from '../../components/footer/Footer';

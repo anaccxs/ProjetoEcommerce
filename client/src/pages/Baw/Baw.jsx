@@ -1,3 +1,4 @@
+// src/pages/Baw/Baw.jsx
 import React from 'react'; 
 import styles from './baw.module.css';  // Importando o CSS Module
 import Footer from '../../components/footer/Footer';

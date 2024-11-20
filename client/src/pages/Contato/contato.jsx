@@ -1,27 +1,10 @@
+// src/pages/Contato/contato.jsx
 import React, { useState } from 'react';
 import styles from './contato.module.css'; // Importando o CSS Module
 import Footer from '../../components/footer/Footer';
 import Header from '../../components/header/Header';
 
 const Contato = () => {
-  const [formData, setFormData] = useState({
-    nome: '',
-    sobrenome: '',
-    email: '',
-    assunto: '',
-    mensagem: '',
-  });
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prevData) => ({ ...prevData, [name]: value }));
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const { nome, sobrenome } = formData;
-    alert(`Mensagem enviada por: ${nome} ${sobrenome}`);
-  };
 
   return (
     <div>
@@ -32,7 +15,7 @@ const Contato = () => {
       <section className={styles.mainsec}>
         <section className={styles.section1}>
           <h2>Entre em contato</h2>
-          <form onSubmit={handleSubmit}>
+          <form>
             <div className={styles.nome1}>
               <div className={styles.nome}>
                 <label htmlFor="txtnome" className={styles.lbl1}>Nome</label><br />
@@ -40,8 +23,6 @@ const Contato = () => {
                   type="text"
                   className={styles.txtnome}
                   name="nome"
-                  value={formData.nome}
-                  onChange={handleChange}
                 />
               </div>
 
@@ -51,8 +32,6 @@ const Contato = () => {
                   type="text"
                   className={styles.txtnome}
                   name="sobrenome"
-                  value={formData.sobrenome}
-                  onChange={handleChange}
                 />
               </div>
             </div>
@@ -63,8 +42,6 @@ const Contato = () => {
                   type="email"
                   className={styles.email}
                   name="email"
-                  value={formData.email}
-                  onChange={handleChange}
                 />
               </div>
 
@@ -74,8 +51,6 @@ const Contato = () => {
                   type="text"
                   className={styles.assunto}
                   name="assunto"
-                  value={formData.assunto}
-                  onChange={handleChange}
                 />
               </div>
 
@@ -87,8 +62,6 @@ const Contato = () => {
                   cols="30"
                   rows="10"
                   placeholder="Escreva sua mensagem aqui :)"
-                  value={formData.mensagem}
-                  onChange={handleChange}
                 ></textarea>
                 <input type="submit" className={styles.btn} value="Enviar mensagem" />
               </div>

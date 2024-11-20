@@ -1,3 +1,4 @@
+// src/components/PrivateRoute.jsx
 import React from "react";
 import { Navigate, Outlet, useLocation } from "react-router-dom";
 
@@ -8,7 +9,7 @@ const PrivateRoute = ({ roles, requiresSetup = false }) => {
 
     // Check if the user is authenticated
     if (!token) {
-        return <Navigate to="/" />;
+        return <Navigate to="/login" />;
     }
 
     // Check if the user has the required role

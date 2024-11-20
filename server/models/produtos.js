@@ -1,7 +1,8 @@
+// /models/produtos.js
 const { DataTypes } = require('sequelize');
 const sequelize = require('../bd/bd');
 
-const Livros = sequelize.define('Produtos', {
+const Produtos = sequelize.define('Produtos', {
   name: {
     type: DataTypes.STRING,
     allowNull: false,
@@ -17,4 +18,4 @@ const Livros = sequelize.define('Produtos', {
   timestamps: true,
 });
 
-module.exports = Livros;
+module.exports = Produtos;

@@ -1,3 +1,4 @@
+// src/pages/Lacoste/Lacoste.jsx
 import React from 'react';
 import styles from './lacoste.module.css'; // CSS Module
 import Header from '../../components/header/Header';

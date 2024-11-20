@@ -1,3 +1,4 @@
+// src/pages/Produtos/Produtos
 import React from 'react';
 import styles from './produtos.module.css'; // CSS Module
 import Footer from '../../components/footer/Footer';
@@ -12,7 +13,7 @@ const Produtos = () => {
       </header>
 
       <section className={styles.section1}>
-        <Link to="/Baw"><h1>BAW</h1>
+        <Link to="/baw"><h1>BAW</h1>
         <h2>Coleção 90's Kids</h2></Link>
         <div className={styles.baw1}>
           <div>
@@ -43,7 +44,7 @@ const Produtos = () => {
       </section>
 
       <section className={styles.section1}>
-        <Link to="/Lacoste"><h1>LACOSTE</h1> 
+        <Link to="/lacoste"><h1>LACOSTE</h1> 
         <h2>Polos e Mais</h2> </Link>
         <div className={styles.lacoste}> 
           <div>
@@ -59,7 +60,7 @@ const Produtos = () => {
             <h2 className={styles.precos}>R$130,00</h2>
           </div>
           <div>
-            <Link className={styles.txtSaibaMais} to="/Lacoste">
+            <Link className={styles.txtSaibaMais} to="/lacoste">
               <img src="seta.png" width="115px" className={styles.seta} />
             </Link>
           </div>

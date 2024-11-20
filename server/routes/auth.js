@@ -1,13 +1,36 @@
+// /routes/auth.js
 const express = require('express');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const User = require('../models/user');
 const router = express.Router();
 
+// Middleware para proteger rotas
+const authMiddleware = (roles = []) => {
+  return (req, res, next) => {
+    const authHeader = req.headers.authorization;
+
+    if (!authHeader) return res.status(401).json({ error: 'Token não fornecido' });
+
+    const token = authHeader.split(' ')[1];
+
+    jwt.verify(token, 'secreta', (err, user) => {
+      if (err) return res.status(403).json({ error: 'Token inválido' });
+
+      if (roles.length && !roles.includes(user.role)) {
+        return res.status(403).json({ error: 'Acesso negado' });
+      }
+
+      req.user = user;
+      next();
+    });
+  };
+};
+
 // Rota para registrar um novo usuário
 router.post('/register', async (req, res) => {
   try {
-    const { username, email, password } = req.body;
+    const { username, email, password, role } = req.body;
 
     // Verificar se o email já está em uso
     const existingUser = await User.findOne({ where: { email } });
@@ -23,6 +46,7 @@ router.post('/register', async (req, res) => {
       username,
       email,
       password: hashedPassword,
+      role,
     });
 
     res.status(201).json({ message: 'Usuário cadastrado com sucesso!' });
@@ -57,28 +81,20 @@ router.post('/login', async (req, res) => {
   }
 });
 
-// Middleware para proteger rotas (apenas exemplo, opcional)
-const authMiddleware = (roles = []) => {
-  return (req, res, next) => {
-    const authHeader = req.headers.authorization;
+// Rota para obter dados do usuário autenticado
+router.get('/me', authMiddleware(), async (req, res) => {
+  try {
+    const user = await User.findByPk(req.user.id); // Substitua por sua lógica de busca
+    if (!user) {
+      return res.status(404).json({ error: 'Usuário não encontrado' });
+    }
 
-    if (!authHeader) return res.status(401).json({ error: 'Token não fornecido' });
+    // Retornar informações do usuário, excluindo a senha
+    res.json({ id: user.id, username: user.username, email: user.email, role: user.role });
+  } catch (error) {
+    res.status(500).json({ error: 'Erro ao buscar dados do usuário' });
+  }
+});
 
-    const token = authHeader.split(' ')[1];
-
-    jwt.verify(token, 'secreta', (err, user) => {
-      if (err) return res.status(403).json({ error: 'Token inválido' });
-
-      if (roles.length && !roles.includes(user.role)) {
-        return res.status(403).json({ error: 'Acesso negado' });
-      }
-
-      req.user = user;
-      next();
-    });
-  };
-};
-
-// Exportar as rotas e o middleware (se necessário)
-module.exports =  router;
-  
+// Exportar as rotas
+module.exports = router;
