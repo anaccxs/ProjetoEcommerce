@@ -1,0 +1,41 @@
+
+.fotos {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+}
+
+.fotos div{
+    width: 400px;
+    margin: 2% 5%;
+    cursor: pointer;
+}
+
+.fotos img{
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.fotos img:hover{
+    transform: scale(1.02);
+    overflow: hidden;
+  }
+
+.fotos h2 {
+  font-family: futura leve;
+  margin-top: 5%;
+  font-size: 1.5em;
+  letter-spacing: 5px;
+  color: #30020a;
+}
+  
+.fotos p{
+  font-family: futura leve;
+  letter-spacing: 2px;
+  font-size: 1.5em;
+  color: #30020a;
+}

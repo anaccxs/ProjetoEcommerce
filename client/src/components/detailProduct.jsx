@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 /*nem perto de terminar*/
 
-export default function Product({
+export default function ({
   id,
   image,
   name,

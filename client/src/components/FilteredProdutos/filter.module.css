@@ -1,0 +1,96 @@
+
+.container h1, h2 {
+  color: #444;
+  text-align: center;
+}
+  
+  .container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.2em;
+  }
+  
+  .container button {
+    background-color: black;
+    color: white;
+    border: none;
+    line-height: 1;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.1s ease;
+  }
+  
+  .container button:hover {
+    background-color: #454545;
+  }
+  
+  .container select {
+    padding: 10px;
+    margin: 10px 0;
+    width: 30%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+
+  .container ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .container li {
+    background-color: #f9f9f9;
+    margin: 10px 0;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .container li span {
+    font-size: 18px;
+  }
+  
+  .container li button {
+    margin-left: 10px;
+  }
+  
+  .container li button.delete {
+    background-color: #dc3545;
+  }
+  
+  .container li button.delete:hover {
+    background-color: #c82333;
+  }
+  
+  .container  li button.edit {
+    background-color: #ffc107;
+  }
+  
+  .container li button.edit:hover {
+    background-color: #e0a800;
+  }
+  
+  .selectdiv{
+    width: 100%;
+    gap: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+.container li img {
+  width: 200px;  
+  height: 300px; 
+  object-fit: cover;   
+  border-radius: 5px; 
+  visibility: visible;
+}

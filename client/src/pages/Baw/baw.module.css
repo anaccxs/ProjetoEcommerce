@@ -85,5 +85,13 @@
   font-family: futura leve;
   margin-top: 5%;
   font-size: 1.5em;
+  letter-spacing: 5px;
+  color: #30020a;
+}
+  
+.fotos p{
+  font-family: futura leve;
+  letter-spacing: 2px;
+  font-size: 1.5em;
   color: #30020a;
 }

@@ -1,4 +1,5 @@
-// /models/produtos.js
+// server/models/produtos.js
+// server/models/produtos.js
 const { DataTypes } = require('sequelize');
 const sequelize = require('../bd/bd');
 
@@ -7,10 +8,14 @@ const Produtos = sequelize.define('Produtos', {
     type: DataTypes.STRING,
     allowNull: false,
   },
-  preco: {
-    type: DataTypes.INTEGER,
+  price: {
+    type: DataTypes.FLOAT,
   },
-  marca: {
+  brand: {
+    type: DataTypes.STRING,
+    allowNull: false,
+  },
+  imageUrl: {
     type: DataTypes.STRING,
     allowNull: false,
   },

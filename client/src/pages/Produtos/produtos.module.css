@@ -62,6 +62,14 @@
   align-items: center;
 }
 
+
+.baw1 p{
+  color: black;
+  font-family: futura leve;
+  font-size: 1.2em;
+  letter-spacing: 5px;
+}
+
 .baw1 div{
     margin: 1% 4%;
 }
@@ -99,6 +107,13 @@
     margin-top: 1%;
     margin-bottom: 6%;
     overflow-x: auto;
+}
+
+.lacoste p{
+  color: black;
+  font-family: futura leve;
+  font-size: 1.2em;
+  letter-spacing: 5px;
 }
 
 .lacoste div{
