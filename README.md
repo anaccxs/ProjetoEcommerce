@@ -6,23 +6,24 @@ Ousadia é um projeto e-commerce de roupas.
 
 Instale node modules e as dependências no client
 
-```bash
 npm install axios react-router-dom
-```
+
 
 ## Uso / Client
 
-```python
 npm run dev
-```
 
 ## Instalação / Servidor
 
-Instale node modules e as dependências no client
+Instale node modules e as dependências no servidor
 
-```bash
 npm install cors express sequelize @sequelize/sqlite3 jsonwebtoken multer bcryptjs dotenv
-```
+
+
+## Uso / Servidor
+
+node criarTabela.js (roda banco de dados)
+node index.js (inicia o servidor)
 
 ## Uso / Servidor
 
